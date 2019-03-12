@@ -9,7 +9,7 @@ newHeading.appendChild(document.createTextNode('Task List'));
 
 // Get the old heading
 const oldHeading = document.getElementById('task-title');
-console.log("oldHeading", oldHeading);
+    // console.log("oldHeading", oldHeading);
 
 //Parent
 const cardActiond = document.querySelector('.card-action');
@@ -19,9 +19,9 @@ cardActiond.replaceChild(newHeading, oldHeading);
 
 // REMOVE ELEMENT
 const lis = document.querySelectorAll('li');
-console.log(lis);
+    // console.log(lis);
 const list = document.querySelector('ul');
-console.log(list);
+    // console.log(list);
 
 // Remove list item
 lis[0].remove();
@@ -30,8 +30,8 @@ lis[0].remove();
 list.removeChild(lis[3]);
 
 // CLASSES & ATTR
-const firstLi = document.querySelector('li:first-chlid');
-console.log("firstLi",firstLi);
+const firstLi = document.querySelector('li:first-child');
+    console.log("firstLi",firstLi);
 const link = firstLi.children[0];
 let val;
 
@@ -40,7 +40,7 @@ val = link.className;
 val = link.classList;
 val = link.classList[0];
 link.classList.add('test');
-console.log("link",link);
+    // console.log("link",link);
 link.classList.remove('test');
 val = link;
 // Attributes
