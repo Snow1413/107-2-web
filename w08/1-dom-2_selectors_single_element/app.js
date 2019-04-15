@@ -28,17 +28,17 @@ console.log(lis[0]);
 
 item = document.querySelectorAll('ul.collection li.collection-item');
 
-item.forEach(function(li,index){
-        li.textContent = `${index}:Hello`;
-    });
+item.forEach(function (li, index) {
+    li.textContent = `${index}:Hello`;
+});
 
-    const lisOdd = document.querySelectorAll('li:nth-child(odd)');
+const lisOdd = document.querySelectorAll('li:nth-child(odd)');
 
-    lisOdd.forEach(function(li){
-        li.style.background = '#ccc';
-    })
+lisOdd.forEach(function (li) {
+    li.style.background = '#ccc';
+})
 
 const lisEven = document.querySelectorAll('li:nth-child(even)');
-for(let i=0; i<lisEven.length;i++){
+for (let i = 0; i < lisEven.length; i++) {
     lisEven[i].style.background = '#e4e4e4';
 }
