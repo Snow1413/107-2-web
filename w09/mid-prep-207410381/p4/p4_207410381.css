@@ -1,0 +1,69 @@
+.logo {
+    width: 20%;
+    height: 80px;
+    background: pink;
+    float: left;
+}
+
+header {
+    width: 80%;
+    height: 80px;
+    margin-left: 20%;
+    background: lightsalmon;
+}
+
+aside {
+    width: 20%;
+    height: 500px;
+    background: lightgoldenrodyellow;
+    float: left;
+}
+
+article {
+    width: 80%;
+    height: 500px;
+    margin-left: 20%;
+    background: lightgreen;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background: lightseagreen;
+}
+
+nav {
+    width: 90%;
+    height: 95%;
+    margin: 10px auto;
+    padding-top: 10px;
+    background: lightgrey;
+}
+
+section {
+    width: 75%;
+    height: 70%;
+    margin: auto;
+    background: lightskyblue;
+}
+
+#picContainer {
+    width: 90%;
+    height: 25%;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background: lightcoral;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+img {
+    width: 19%;
+    border: 2px solid black;
+}
