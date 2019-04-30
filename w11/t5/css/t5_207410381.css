@@ -1,0 +1,69 @@
+        .container1 {
+            width: 630px;
+            height: 565px;
+            margin: auto;
+            border: 5px solid purple;
+            background: burlywood;
+        }
+
+        .container2 {
+            width: 780px;
+            height: 540px;
+            margin: auto;
+            border: 5px solid purple;
+            background: burlywood;
+        }
+
+
+        header button {
+            float: left;
+            margin-left: 5px;
+        }
+
+        header {
+            width: 630px;
+            height: 40px;
+            text-align: center;
+            line-height: 20px;
+            background: burlywood;
+            clear: both;
+        }
+
+        h2 {
+            margin: 10;
+        }
+
+        aside.ch1 {
+            background: #fff6df;
+            width: 630px;
+            height: 25px;
+            margin: 0;
+        }
+
+        aside.ch2 {
+            float: left;
+            background: #fff6df;
+            width: 150px;
+            height: 480px;
+            margin: 0;
+        }
+
+        .btn {
+            margin-top: 50px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        img {
+            width: 630px;
+            height: 480px;
+        }
+
+        #player {
+            width: 630px;
+            height: 480px;
+            background-color: #f5eaea;
+            float: left;
+        }
