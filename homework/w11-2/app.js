@@ -1,26 +1,73 @@
-// let name = "hellow";
-// console.log("Name = ",name);
+// String
 
-function Person(name, dob) {
-    //birthday = new Date(dob);
-    this.name = name;
-    // this.age = age;
-    this.birthday = new Date(dob);
-    this.calculateAge = function(){
-        const diff = Date.now() - this.birthday.getTime();
-        const ageDate = new Date(diff);
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
-    
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+
+// name2.foo = 'bar';
+// console.log(name2);
+
+console.log(typeof name2);
+
+if(name2 === 'Jeff'){
+    console.log('YES');
+} else {
+    console.log('NO');
 }
 
-// const brad = new Person('Brad', 36);
-// const john = new Person('John', 30);
+// Number
 
-// console.log(john.age);
+const num1 = 5;
+const num2 = new Number(5);
+const num3 = Number(5);
 
-const brad = new Person('Brad', '9-10-1981');
-console.log(brad.name);
-console.log("Name = ",name);
-console.log(brad);
-console.log(brad.calculateAge());
+// Boolean
+
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+// Function
+
+const getSun1 = function(x, y){
+    return x + y;
+}
+
+const getSum2 = new Function('x', 'y', 'return 1 + 1');
+
+// Object
+
+const john1 = {name: "John"};
+const john2 = new Object({name: "John"});
+console.log(john2);
+
+// Arrays
+
+const arr1 = [1,2,3,4];
+const arr2 = new Array(1,2,3,4);
+
+// Regular Expression
+
+const re1 = /\w+/;
+const re2 = new RegExp('\\w+');
+
+console.log(re2);
+
+var person = {
+    name : ['Bob', 'Smith'],
+    age : 32,
+    gender : 'male',
+    interests : ['music', 'skiing'],
+    bio : function() {
+        alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0])
+    },
+    greeting: function() {
+        alert('Hi! I\'m ' + this.name[0] + '.');
+    }
+};
+
+// preson.name[0]
+// person.age
+// person.interests[1]
+// person.bio()
+// person.greetiong()
+// Person constructor
+
