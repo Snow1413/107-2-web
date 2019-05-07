@@ -1,69 +1,70 @@
-        .container1 {
-            width: 630px;
-            height: 565px;
-            margin: auto;
-            border: 5px solid purple;
-            background: burlywood;
-        }
+.container {
+    width: 750px;
+    height: 580px;
+    background: rgb(255, 206, 150);
+    border: 5px solid purple;
+    margin: auto;
+}
 
-        .container2 {
-            width: 780px;
-            height: 540px;
-            margin: auto;
-            border: 5px solid purple;
-            background: burlywood;
-        }
+header {
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    background: rgb(255, 174, 67);
+    text-align: center;
+}
 
+h1 {
+    margin: 0;
+    padding: 0;
+}
 
-        header button {
-            float: left;
-            margin-left: 5px;
-        }
+header button {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px
+}
 
-        header {
-            width: 630px;
-            height: 40px;
-            text-align: center;
-            line-height: 20px;
-            background: burlywood;
-            clear: both;
-        }
+nav ul {
+    list-style: none;
+    margin: auto 0;
+}
 
-        h2 {
-            margin: 10;
-        }
+.row nav {
+    width: 100%;
+    height: 40px;
+    background: rgb(255, 190, 116);
+}
 
-        aside.ch1 {
-            background: #fff6df;
-            width: 630px;
-            height: 25px;
-            margin: 0;
-        }
+.row nav ul li {
+    float: left;
+    margin-left: 35px;
+    margin-top: 10px;
+}
 
-        aside.ch2 {
-            float: left;
-            background: #fff6df;
-            width: 150px;
-            height: 480px;
-            margin: 0;
-        }
+.row .player {
+    width: 100%;
+    height: 480px;
+}
 
-        .btn {
-            margin-top: 50px;
-        }
+.col nav {
+    width: 120px;
+    height: 520px;
+    float: left;
+    background: rgb(255, 190, 116);
+}
 
-        ul {
-            margin: 0;
-        }
+.col ul {
+    margin-left: 20px;
+    padding: 0;
+}
 
-        img {
-            width: 630px;
-            height: 480px;
-        }
+.col ul li {
+    margin-top: 70px;
+}
 
-        #player {
-            width: 630px;
-            height: 480px;
-            background-color: #f5eaea;
-            float: left;
-        }
+.col .player {
+    width: 630px;
+    height: 520px;
+    float: right;
+}

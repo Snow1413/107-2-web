@@ -1,44 +1,44 @@
-function play(index) {
-    let p = document.getElementById('player');
-    switch (index) {
+function goPage (index) {
+    let rp = document.querySelector('.row .player');
+    let cp = document.querySelector('.col .player');
+
+    switch(index) {
         case 1:
-            p.innerHTML = '<img src="./images/TKU1.png">';
-            break;
+            rp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/RechrtUxfQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            cp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/RechrtUxfQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        break;
         case 2:
-            p.innerHTML = '<img src="./images/TKU2.png">';
-            break;
+            rp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRWX49Furew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            cp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRWX49Furew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        break;
         case 3:
-            p.innerHTML = '<img src="./images/TKU3.png">';
-            break;
+            rp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/METhdbL_iMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            cp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/METhdbL_iMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        break;
         case 4:
-            p.innerHTML = '<img src="./images/TKU4.png">';
-            break;
+            rp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZyDbq-lEKTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            cp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZyDbq-lEKTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        break;
         case 5:
-            p.innerHTML = '<img src="./images/TKU5.png">';
-            break;
+            rp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/NlsrJbVvjaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            cp.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/NlsrJbVvjaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        break;
     }
 }
 
-function goPage(i) {
-    let container1 = document.querySelector(".container1");
-    let container2 = document.querySelector(".container2");
-    let aside = document.querySelector("aside");
-    let btn = document.querySelectorAll("ul button");
-    switch (i) {
-        case 1:
-            aside.className = "ch1";
-            container2.className = "container1";
-            btn.forEach(function(x){
-                x.classList.remove("btn");
-            })
-            break;
 
+function display(index) {
+    let r = document.querySelector('.row');
+    let c = document.querySelector('.col');
+
+    switch(index) {
+        case 1:
+            r.style.display = "block";
+            c.style.display = "none";
+        break;
         case 2:
-            aside.className = "ch2";
-            container1.className = "container2";
-            btn.forEach(function(x){
-                x.classList.add("btn");
-            })
-            break;
+            c.style.display = "block";
+            r.style.display = "none";
+        break;
     }
 }
