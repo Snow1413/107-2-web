@@ -30,7 +30,6 @@ function calculateResults() {
     }
 
     function showAlert(msg) {
-        console.log(document.querySelector('#results p h5'))
         document.querySelector('#results p').style.display = "block";
         document.querySelector('#results p').innerHTML = `<h5>${msg}</h5>`;
     }
