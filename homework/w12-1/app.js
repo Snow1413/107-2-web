@@ -10,7 +10,7 @@ GAME FUNCTION:
 // Game values
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min, max),
     guessLeft = 3;
 
 // UI Elements
@@ -39,30 +39,37 @@ guessBtn.addEventListener('click', function () {
     console.log(max, min, guess);
     if (isNaN(guess) || guess < min || guess > max) {
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
-    }
-
-    if (guess === winningNum) {
-        // Game OVER - won
-        gameOver(true, `${winningNum} is correct, YOU WIN!`)
-
     } else {
-        // Wrong number
-        guessesLeft -= 1;
-
-        if (guessLeft === 0) {
-            // Game over -lost
-            gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
+        if (guess === winningNum) {
+            // Game OVER - won
+            gameOver(true, `${winningNum} is correct, YOU WIN!`)
+    
         } else {
-
-            // Game continues - answer wrong
-            guessInput.style.borderColor = 'red';   //Change bordere color
-
-            guessInput.value = '';                  //clear Input
-
-            setMessage(`${guess} is not correct, ${guessLeft} guesses left`, 'red');
+            // Wrong number
+            guessLeft--;
+    
+            if (guessLeft === 0) {
+                // Game over - lost
+                
+                gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
+            } else {
+    
+                // Game continues - answer wrong
+                guessInput.style.borderColor = 'red';   //Change bordere color
+    
+                guessInput.value = '';                  //clear Input
+    
+                setMessage(`${guess} is not correct, ${guessLeft} guesses left`, 'red');
+            }
         }
     }
 });
+
+game.addEventListener('mouseup', function(e){
+    if(e.target.className === 'play-again'){
+        window.location.reload();
+    }
+})
 
 // Game Over
 function gameOver(won, msg){
@@ -76,6 +83,10 @@ function gameOver(won, msg){
     message.style.color = color;            // Set text color
 
     setMessage(msg);                        // Set message
+
+    //Play again?
+    guessBtn.value = 'Play again';
+    guessBtn.className += 'play-again';
 }
 
 // Get Winning Number
