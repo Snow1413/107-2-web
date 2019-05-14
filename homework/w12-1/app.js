@@ -20,9 +20,16 @@ const game = document.querySelector('#game'),
     guessBtn = document.querySelector('#guess-btn'),
     guessInput = document.querySelector('#guess-input'),
     message = document.querySelector('.message');
+
 // Assign UI min and max
 minNum.textContent = min;
 maxNum.textContent = max;
+
+game.addEventListener('mousedown', function (e) {
+    if (e.target.className === 'play-again') {
+        window.location.reload();
+    }
+})
 
 // Listen for guess
 guessBtn.addEventListener('click', function () {
@@ -32,20 +39,49 @@ guessBtn.addEventListener('click', function () {
     console.log(max, min, guess);
     if (isNaN(guess) || guess < min || guess > max) {
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+    }
+
+    if (guess === winningNum) {
+        // Game OVER - won
+        gameOver(true, `${winningNum} is correct, YOU WIN!`)
+
     } else {
-        // Check if won
-        if (guess === winningNum) {
-            // Disable input
-            guessInput.disabled = true;
-            // Change border color
-            guessInput.style.borderColor = 'green';
-            // Set message
-            setMessage(`${winningNum} is correct, YOU WIN!`, 'green');
+        // Wrong number
+        guessesLeft -= 1;
+
+        if (guessLeft === 0) {
+            // Game over -lost
+            gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
         } else {
-            setMessage(`${guess} is wroung number`, 'red');
+
+            // Game continues - answer wrong
+            guessInput.style.borderColor = 'red';   //Change bordere color
+
+            guessInput.value = '';                  //clear Input
+
+            setMessage(`${guess} is not correct, ${guessLeft} guesses left`, 'red');
         }
     }
 });
+
+// Game Over
+function gameOver(won, msg){
+    let color;
+    won === true ? color = 'green' : color = 'red';
+
+    guessInput.disabled = true;             // Disable input
+
+    guessInput.style.bordercolor = color;   // Change border color
+
+    message.style.color = color;            // Set text color
+
+    setMessage(msg);                        // Set message
+}
+
+// Get Winning Number
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 // Set message
 function setMessage(msg, color) {
