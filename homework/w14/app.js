@@ -1,5 +1,6 @@
 document.getElementById('loan-form').addEventListener('submit', function (e) {
     document.getElementById('loading').style.display = "block";
+    document.querySelector('#results p').style.display = "none";
     document.getElementById('results').style.display = "none";
     setTimeout(calculateResults, 500);
     e.preventDefault();
@@ -30,7 +31,6 @@ function calculateResults() {
     }
 
     function showAlert(msg) {
-        document.querySelector('#results p').style.display = "block";
         document.querySelector('#results p').innerHTML = `<h5>${msg}</h5>`;
     }
 
@@ -61,6 +61,7 @@ function calculateResults() {
 
 
     // UI Vars
+    document.querySelector('#results p').style.display = "block";
     document.getElementById('loading').style.display = "none";
     document.getElementById('results').style.display = "block";
 }
