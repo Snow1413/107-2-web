@@ -21,21 +21,19 @@ function calculateResults() {
 
 
     if (BMI < 18.5) {
-        gap = (18.5 - BMI).toFixed(1);
-        showAlert(`您的BMI為${BMI}，距離標準的BMI還差${gap}`);
+        gap = ((18.5 - BMI) * (height * height)).toFixed(1);
+        showAlert(`您的BMI為${BMI}，距離健康的體重還差 ${gap} 公斤`);
     } else if (BMI > 24) {
-        gap = (BMI - 24).toFixed(1);
-        showAlert(`您的BMI為${BMI}，距離標準的BMI還差${gap}`);
+        gap = ((BMI - 24) * (height * height)).toFixed(1);
+        showAlert(`您的BMI為${BMI}，距離健康的體重還差 ${gap} 公斤`);
     } else {
         showAlert(`您的BMI為${BMI}，已在標準的範圍內`);
     }
 
+
     function showAlert(msg) {
         document.querySelector('#results p').innerHTML = `<h5>${msg}</h5>`;
     }
-
-
-
 
 
 
