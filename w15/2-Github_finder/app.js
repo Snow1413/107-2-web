@@ -11,17 +11,18 @@ const searchUser = document.querySelector('#searchUser');
 searchUser.addEventListener('keyup', (e) => {
     const userText = e.target.value;
     console.log(userText)
-    if(userText !== ''){
+    if (userText !== '') {
         github.getUser(userText)
-        .then(data => {
-            // console.log(data);
-            if(data.profile.message === 'Not Found'){
-                ui.showAlert('User not found', 'alert alert -danger')
-            } else {
-                ui.showProfile(data.profile);
-                ui.showRepos(data.repos);
-            }
-        })
+            .then(data => {
+                console.log(data.profile.message)
+                if (data.profile.message === 'Not Found') {
+                    ui.showAlert('User not found', 'alert alert-danger');
+                    ui.clearProfile();
+                } else {
+                    ui.showProfile(data.profile);
+                    ui.showRepos(data.repos);
+                }
+            })
 
 
     } else {

@@ -31,7 +31,7 @@ class UI {
         `;
     }
 
-    showRepos(repos){
+    showRepos(repos) {
         let output = '';
         repos.forEach(repo => {
             output += `
@@ -49,13 +49,12 @@ class UI {
         });
         document.getElementById('repos').innerHTML = output;
     }
-    
+
     showAlert(message, className) {
         const div = document.createElement('div');
-        div.className = `alert ${className}`;
+        div.className = `${className}`;
         div.appendChild(document.createTextNode(message));
-        const container = document.querySelector('.container');
-        container.insertBefore(div, document.getElementById('search'));
+        document.querySelector('.searchContainer').insertBefore(div, document.querySelector('.search'));
 
         setTimeout(function () {
             document.querySelector('.alert').remove();
