@@ -16,7 +16,7 @@ fetch('./js/testimonials.json')
                 <h3>${p.name}</h3>
                 <h4>${p.title}</h4>
                 <p>
-                    <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
                     ${p.intro}
                     <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
