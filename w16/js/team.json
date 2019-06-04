@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Walter White",
+        "title": "Chief Executive Officer",
+        "pic": "img/team-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Sarah Jhonson",
+        "title": "Product Manager",
+        "pic": "img/team-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "William Anderson",
+        "title": "CTO",
+        "pic": "img/team-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Amanda Jepson",
+        "title": "Accountant",
+        "pic": "img/team-4.jpg"
+    }
+]
