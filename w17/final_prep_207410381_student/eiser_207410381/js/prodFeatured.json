@@ -1,0 +1,20 @@
+[
+    {
+        "pic": "f-p-1.jpg",
+        "name": "Latest men's sneaker",
+        "price": "25.00",
+        "Pprice": "35.00"
+    },
+    {
+        "pic": "f-p-2.jpg",
+        "name": "Red women purses",
+        "price": "25.00",
+        "rePrice": "35.00"
+    },
+    {
+        "pic": "f-p-3.jpg",
+        "name": "Men stylist Smart Watch",
+        "price": "25.00",
+        "rePrice": "35.00"
+    }
+]
